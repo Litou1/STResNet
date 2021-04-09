@@ -8,9 +8,9 @@
 
   , "datasets": {
     "val": {
-        "data_type":"h5"
+        "data_type":"h5" // h5 | dicom
       , "name": "STResNet_experiment"
-      , "uids_path": "/datasets/uids.txt"
+      , "uids_path": "/datasets/uids.txt" // uid of cases
       , "dataroot_HR": "/datasets/LD"
       , "dataroot_LR": "/datasets/FD"
       , "slice_size": 64 // 16 |  32 | 48
@@ -27,7 +27,7 @@
   }
 
   , "network_G": {
-    "which_model_G": "sl_resnet" // RRDB_net | sr_resnet | sl_resnet
+    "which_model_G": "sl_resnet" // sl_resnet
     , "norm_type": null
     , "nf": 64
     , "nb": 9

@@ -1,6 +1,6 @@
 # STResNet
-Spatial-Temporal resnet code for efficient CT image denoising
-This repository is the official implementation of [Efficient and Accurate Spatial-Temporal Denoising Network for LDCT scans]
+Spatial-Temporal ResNet code for efficient CT image denoising.
+This repository is the official implementation of [Efficient and Accurate Spatial-Temporal Denoising Network for LDCT scans](url)
 
 
 ## Requirements
@@ -34,7 +34,7 @@ Pretrained models are stored in experiemnts\<run_name>\models\xxx.pth folder
 
 Our model achieves the following performance on image metrics and speed-ups. 
 
-|      |                      | ↑ PSNR(dB)          | ↑ SSIM          | ↓ LPIPS           | Inference time (sec) | Training time  per iter (sec) | Inference Speed-up | Training Speed-up |
+|      |                      | ↑PSNR(dB)           | ↑SSIM           | ↓LPIPS            | Inference time (sec) | Training time  per iter (sec) | Inference Speed-up | Training Speed-up |
 |------|----------------------|---------------------|-----------------|:-----------------:|----------------------|-------------------------------|--------------------|-------------------|
 | FP32 | SRResNet  (baseline) | 31.31±0.30          | 0.7216±0.0113   | 0.3635±0.0074     | 27.4(446.7*)         | 6.5                           | N/A                | N/A               |
 |      | STResNet             | 31.91±0.44          | 0.7265±0.0110   | 0.3715±0.0075     | 14.4(267.0*)         | 3.9                           | 1.67               | 1.65              |
