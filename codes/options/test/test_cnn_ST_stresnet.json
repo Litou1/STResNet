@@ -1,0 +1,39 @@
+{
+  "name": "3DCNN_ST_STResNet"
+  , "model": "sr"
+  , "scale": 2.0
+  , "gpu_ids": [0]
+  , "precision": "int8" // fp32(null), fp16, int8
+  , "result_format": "nrrd" // nrrd | dicom
+
+  , "datasets": {
+    "val": {
+        "data_type":"h5"
+      , "name": "STResNet_experiment"
+      , "uids_path": "/datasets/uids.txt"
+      , "dataroot_HR": "/datasets/LD"
+      , "dataroot_LR": "/datasets/FD"
+      , "slice_size": 64 // 16 |  32 | 48
+      , "overlap_slice_size": 4 // 4
+      , "full_volume": false // overrides slice_size, support int8 / fp32 on cpu
+      , "get_pdist": false
+    }
+  }
+
+  , "path": {
+    "root": "/workspace/STResNet"
+  , "results_dir": "../results/3DCNN_ST_stresnet"
+  , "pretrain_model_G": "/workspace/STResNet/experiments/3DCNN_ST_STResNet/models/latest_G.pth"
+  }
+
+  , "network_G": {
+    "which_model_G": "sl_resnet" // RRDB_net | sr_resnet | sl_resnet
+    , "norm_type": null
+    , "nf": 64
+    , "nb": 9
+    , "in_nc": 1
+    , "out_nc": 1
+    , "inter_nc": 64
+  }
+
+}
